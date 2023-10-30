@@ -2,21 +2,21 @@
 
 **EM DESENVOLVIMENTO**
 
-Tecnologias Previstas
+**Tecnologias Previstas**
 
 O sistema fará uso da linguagem Java com Spring Framework, HTML e CSS.
 
-Desenvolvedores:
+**Desenvolvedores:**
 
 Diego Luz
 
-Descrição Geral do Sistema:
+**Descrição Geral do Sistema:**
 
 O sistema PCars provê eficiência na administração de Concessionárias,
 trazendo funcionalidades para operações do dia a dia dos estabelecimentos
 disponibilizando organização e gerência de funcionários, produtos e clientes.
 
-Funcionalidades
+**Funcionalidades**
 
  Consultas sobre registros financeiros
 
