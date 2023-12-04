@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cadastro de Veículos - PCars Project</title>
+</head>
+
+<body>
+<header>
+  <h1>Cadastro de Veículos</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Página Inicial</a></li>
+  </ul>
+</nav>
+
+<main>
+  <form id="veiculo-form">
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" required>
+
+    <label for="placa">Placa:</label>
+    <input type="text" id="placa" required>
+
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca" required>
+
+    <label for="valor">Valor:</label>
+    <input type="text" id="valor" required>
+
+    <button type="button" onclick="adicionarVeiculo()">Adicionar Veículo</button>
+  </form>
+
+  <table id="veiculos-table">
+    <thead>
+    <tr>
+      <th>Modelo</th>
+      <th>Placa</th>
+      <th>Marca</th>
+      <th>Valor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Os veículos adicionados serão exibidos aqui -->
+    </tbody>
+  </table>
+</main>
+
+<footer>
+  <p>&copy; 2023 PCars Project. Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="cadastro-veiculos.js"></script>
+</body>
+
+</html>

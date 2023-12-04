@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Registro de Vendas - PCars Project</title>
+</head>
+
+<body>
+<header>
+  <h1>Registro de Vendas</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Página Inicial</a></li>
+  </ul>
+</nav>
+
+<main>
+  <form id="venda-form">
+    <label for="cliente">Cliente:</label>
+    <input type="text" id="cliente" required>
+
+    <label for="valor">Valor da Venda:</label>
+    <input type="text" id="valor" required>
+
+    <button type="button" onclick="registrarVenda()">Registrar Venda</button>
+  </form>
+
+  <table id="vendas-table">
+    <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Valor da Venda</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- As vendas registradas serão exibidas aqui -->
+    </tbody>
+  </table>
+</main>
+
+<footer>
+  <p>&copy; 2023 PCars Project. Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="registro-vendas.js"></script>
+</body>
+
+</html>
