@@ -17,11 +17,14 @@ public class Venda {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String nome_cliente;
-    private String veiculo;
-    private float valor;
-
-    private int parcelas;
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente nomeCliente;
+    @ManyToOne
+    @JoinColumn(name = "veiculo_id")
+    private Veiculo veiculoVendido;
+    private String valor;
+    private String parcelas;
 
 
 }

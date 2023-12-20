@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link th:rel="stylesheet" th:href="@{/style.css}" type="text/css"/>
   <title>Registro de Vendas - PCars Project</title>
 </head>
 
@@ -15,40 +15,26 @@
 
 <nav>
   <ul>
-    <li><a href="index.html">Página Inicial</a></li>
+    <li><a th:href="@{/}">Página Inicial</a></li>
   </ul>
 </nav>
 
 <main>
-  <form id="venda-form">
-    <label for="cliente">Cliente:</label>
-    <input type="text" id="cliente" required>
+  <form  th:action="@{/gravarVenda}" th:object="${venda}" method="post">
+    <p>Nome do Cliente: <input type="text" th:field="${venda.nomeCliente}"/></p>
+    <p>Veículo: <input type="text" th:field="${venda.veiculoVendido}"/></p>
+    <p>Valor: <input type="text" th:field="${venda.valor}"/></p>
+    <p>Nº de Parcelas: <input type="text" th:field="${venda.parcelas}"/></p>
 
-    <label for="valor">Valor da Venda:</label>
-    <input type="text" id="valor" required>
-
-    <button type="button" onclick="registrarVenda()">Registrar Venda</button>
+    <p><input type="submit" value="Cadastrar"/></p>
   </form>
-
-  <table id="vendas-table">
-    <thead>
-    <tr>
-      <th>Cliente</th>
-      <th>Valor da Venda</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!-- As vendas registradas serão exibidas aqui -->
-    </tbody>
-  </table>
 </main>
 
 <footer>
   <p>&copy; 2023 PCars Project. Todos os direitos reservados.</p>
 </footer>
 
-<script src="script.js"></script>
-<script src="registro-vendas.js"></script>
+<script th:src="@{/registroVendas.js}"></script>
 </body>
 
 </html>
